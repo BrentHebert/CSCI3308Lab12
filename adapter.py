@@ -4,14 +4,19 @@ import facade
 # As you can see, it should contain a start function to start the computer, and a getComputerInfo function to get the information of the CPU, memory and hard disk. 
 # You can only use the Computer class from the facade.py you implemented. Do not use the classes in parts.py 
 class Adapter:
-    def __init__(self):
-        pass
+	def __init__(self):
+		self.com = facade.Computer()
+		pass
 
-    def start(self):
-        pass
+	def start(self):
+		self.com.startComputer()
+		pass
 
-    def getComputerInfo(self):
-        pass
+	def getComputerInfo(self):
+		self.com.printCPUInfo()
+		self.com.printMemInfo()
+		self.com.printHDInfo()
+		pass
 
 
 # The running part. You should not modify this part.

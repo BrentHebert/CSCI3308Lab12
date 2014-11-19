@@ -11,6 +11,23 @@ class Computer:
         self.hd=parts.HardDisk()
     # implement the class below this line    
 
+    def startComputer(self):
+        print "starting up the computer, please wait..."
+        self.cpu.check()
+        self.mem.load()
+        self.hd.mount()
+
+    def printCPUInfo(self):
+        print "printing CPU informatics, please wait..."
+        self.cpu.getInfo()
+
+    def printMemInfo(self):
+        print "printing Memory informatics, please wait..."
+        self.mem.getInfo()
+
+    def printHDInfo(self):
+        print "printing HD informatics, please wait..."
+        self.hd.getInfo()
 
 
 
